@@ -21,3 +21,26 @@ WHERE Name = 'Basma';
 SET Points = 150
 WHERE Name = 'Alex';
 _______________________________________________________________
+
+
+CREATING TABLE:
+
+- CREATE TABLE graduates(
+   ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+   Name           TEXT      NOT NULL UNIQUE,
+   Age            INT,
+   Gender        TEXT,
+   Points         INTEGER,
+   Graduation     TEXT
+);
+--------------------------------------
+1- INSERT INTO graduates(ID, Name, Age, Gender, Points)
+SELECT ID, Name, Age, Gender, Points FROM students
+WHERE Name = 'Layal';
+--------------------------------------
+2- UPDATE graduates
+SET Graduation = '08/09/2018';
+--------------------------------------
+3- DELETE FROM students
+WHERE Name = 'Layal';
+_______________________________________________________________
