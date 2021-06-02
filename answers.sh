@@ -58,3 +58,23 @@ AND companies.Date < 2000;
 WHERE employees.Company = companies.Name;
 AND employees.Role = 'Graphic Designer';
 _______________________________________________________________
+
+
+Count & Filter:
+
+1- SELECT Name from students
+WHERE Points = (SELECT max(points) FROM students);
+-----------------------------------
+2- SELECT avg(points) 'Average Of Points' FROM students;
+-----------------------------------
+3- SELECT count(Name) 'Count OF Student Equal 500' FROM students
+WHERE Points = 500;
+----------------------------------
+4- SELECT Name FROM students
+WHERE Name like 's%'
+OR Name like '%s%'
+OR Name like '%s';
+----------------------------------
+5- SELECT * FROM students
+ORDER BY Points DESC;
+_______________________________________________________________
