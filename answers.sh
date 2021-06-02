@@ -44,3 +44,17 @@ SET Graduation = '08/09/2018';
 3- DELETE FROM students
 WHERE Name = 'Layal';
 _______________________________________________________________
+
+
+JOIN:
+1- SELECT employees.Name, companies.Name, companies.Date FROM employees, Companies
+WHERE employees.Company = companies.Name;
+-------------------------------------
+2- SELECT employees.Name FROM employees, Companies
+WHERE employees.Company = companies.Name;
+AND companies.Date < 2000;
+-------------------------------------
+3- SELECT companies.Name FROM  Companies, employees
+WHERE employees.Company = companies.Name;
+AND employees.Role = 'Graphic Designer';
+_______________________________________________________________
